@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Model weights / checkpoints
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+
+# Outputs / logs / media
+outputs/
+run_logs/
+*.mp4
+*.avi
+*.gif
+*.log
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,48 @@
+{
+  "exp_id": "libero_eval_int8_evaluation",
+  "timestamp": "2026-03-24 18:15:39",
+  "model": {
+    "model_name": "openvla",
+    "checkpoint": "openvla/openvla-7b-finetuned-libero-spatial"
+  },
+  "quant_config": {
+    "quant_method": "bnb_int8",
+    "weight_bits": 8,
+    "compute_dtype": "bf16",
+    "quant_scope": "llm_only",
+    "load_in_4bit": false,
+    "load_in_8bit": true,
+    "skip_modules": [
+      "vision_tower",
+      "multi_modal_projector",
+      "action_head"
+    ]
+  },
+  "input_config": {
+    "task_suite": "libero_spatial",
+    "image_resolution": "224x224",
+    "num_images": 1,
+    "batch_size": 1,
+    "total_episodes": 3,
+    "total_successes": 2,
+    "success_rate": 0.6666666666666666
+  },
+  "hardware": {
+    "gpu_name": "NVIDIA RTX 6000 Ada Generation",
+    "gpu_mem_gb": 47.4,
+    "cuda_version": "12.1",
+    "torch_version": "2.4.1+cu121"
+  },
+  "metrics": {
+    "cold_latency_ms": 1200.03,
+    "mean_latency_ms": 458.99,
+    "std_latency_ms": 58.34,
+    "p50_latency_ms": 443.81,
+    "p95_latency_ms": 491.99,
+    "peak_memory_mb": 8063.55,
+    "action_l1_vs_fp16": null,
+    "action_l2_vs_fp16": null
+  },
+  "status": "success",
+  "error_msg": null
+}

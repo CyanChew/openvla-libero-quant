@@ -1,0 +1,8 @@
+quant_method:
+  - fp16
+  - bnb_int8
+  - bnb_int4
+
+batch_size: 1
+num_warmups: 10
+num_runs: 50
